@@ -37,7 +37,6 @@ jobs:
       - name: Lint
         run: |
           yarn lint:prettier
-          yarn lint:eslint
   build:
     runs-on: ubuntu-latest
 
