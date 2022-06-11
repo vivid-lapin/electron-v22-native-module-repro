@@ -12,7 +12,9 @@ app.on("ready", async () => {
   browser.setFullScreen(true)
   await setTimeout(1000)
   browser.setFullScreen(false)
-  await setTimeout(1000)
-  browser.setWindowButtonVisibility(true)
+  for (const _ of Array(10).keys()) {
+    await setTimeout(1000)
+    browser.setWindowButtonVisibility(true)
+  }
   // No traffic lights!
 })
