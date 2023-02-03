@@ -1,31 +1,32 @@
 {
-  "name": "electron-button-fullscreen-repro",
+  "name": "electron-v22-native-module-repro",
   "version": "1.0.0",
-  "description": "Bug repro",
+  "description": "repro",
   "author": "ci7lus <7887955+ci7lus@users.noreply.github.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/vivid-lapin/electron-v22-native-module-repro"
   },
   "main": "dist/index.js",
   "scripts": {
-    "start": "yarn build && electron .",
+    "start": "yarn build && ELECTRON_ENABLE_STACK_DUMPING=true electron .",
     "build": "tsc",
     "lint:prettier": "prettier --check './src/**/*.{js,ts,tsx}'",
     "format:prettier": "prettier --write './src/**/*.{js,ts,tsx}'"
   },
   "devDependencies": {
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.1",
-    "prettier": "^2.6.2",
-    "ts-node": "^10.8.1",
-    "typescript": "^4.7.3"
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
   },
   "lint-staged": {
     "*.{js,ts,tsx,md}": "prettier"
   },
   "dependencies": {
-    "electron": "^19.0.4"
+    "electron": "^22.2.0",
+    "webchimera.js": "git+https://github.com/neneka/WebChimera.js.git#v0.5.3"
   }
 }
